@@ -13,17 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LindyTummy">
         <activity
+            android:name=".Pertemuan3.BangunRuangActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".Pertemuan3.HealthActivity"
+            android:name=".Pertemuan3.WelcomeActivity"
             android:exported="false" />
         <activity
-            android:name=".Pertemuan3.WelcomeActivity"
+            android:name=".Pertemuan3.HealthActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

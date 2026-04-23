@@ -16,16 +16,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
-    <!-- Tombol 1 -->
+    <!-- Card 1 -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card1"
         android:layout_width="0dp"
         android:layout_height="100dp"
+        android:layout_marginTop="20dp"
         app:cardElevation="6dp"
         app:layout_constraintTop_toBottomOf="@id/tvTitle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <Button
             android:id="@+id/btnBangunRuang"
@@ -34,15 +34,15 @@
             android:text="Bangun Ruang"/>
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Tombol 2 -->
+    <!-- Card 2 -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card2"
         android:layout_width="0dp"
         android:layout_height="100dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintTop_toBottomOf="@id/card1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <Button
             android:id="@+id/btnCustom1"
@@ -51,15 +51,15 @@
             android:text="Custom 1"/>
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Tombol 3 -->
+    <!-- Card 3 -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card3"
         android:layout_width="0dp"
         android:layout_height="100dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintTop_toBottomOf="@id/card2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <Button
             android:id="@+id/btnCustom2"
@@ -68,15 +68,16 @@
             android:text="Custom 2"/>
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Tombol Logout -->
+    <!-- Card 4 -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card4"
         android:layout_width="0dp"
         android:layout_height="100dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintTop_toBottomOf="@id/card3"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <Button
             android:id="@+id/btnLogout"
