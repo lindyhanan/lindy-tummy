@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Menghubungkan layout XML ke Activity
         setContentView(R.layout.activity_main)
 
         // Mengambil semua view dari XML
@@ -50,7 +49,8 @@ class MainActivity : AppCompatActivity() {
             }
 
             // Contoh penggunaan Toast & event listener
-            Toast.makeText(applicationContext, "Anda telah klik tombol Segitiga", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, "Anda telah klik tombol Segitiga",
+                Toast.LENGTH_SHORT).show()
         }
 
         // Tombol hitung Kubus

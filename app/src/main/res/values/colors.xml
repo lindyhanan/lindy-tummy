@@ -1,5 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="bg_soft">#EFEFEF</color>
+
+    <color name="card_pink">#E6C1D3</color>
+    <color name="card_orange">#E8C3A4</color>
+
+    <color name="icon_pink">#E05297</color>
+    <color name="icon_purple">#8B8CE3</color>
+    <color name="icon_orange">#F2A65A</color>
+    <color name="icon_blue">#7CC6C4</color>
+
+    <color name="text_dark">#000000</color>
+    <color name="text_light">#7A7A7A</color>
+
+    <color name="white">#FFFFFF</color>
 </resources>
