@@ -1,4 +1,4 @@
-package com.example.lindy_tummy
+package com.example.lindy_tummy.Home
 
 import android.os.Bundle
 import android.util.Log

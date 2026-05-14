@@ -6,16 +6,16 @@ import androidx.fragment.app.Fragment
 import com.example.lindy_tummy.About.AboutFragment
 import com.example.lindy_tummy.Home.HomeFragment
 import com.example.lindy_tummy.Profile.ProfileFragment
-import com.example.lindy_tummy.databinding.ActivityDashboardBinding
+import com.example.lindy_tummy.databinding.ActivityBaseBinding
 
-class DashboardActivity : AppCompatActivity() {
+class BaseActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityDashboardBinding
+    private lateinit var binding: ActivityBaseBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityDashboardBinding.inflate(layoutInflater)
+        binding = ActivityBaseBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Fragment default

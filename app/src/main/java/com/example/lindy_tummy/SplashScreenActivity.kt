@@ -29,7 +29,7 @@ class SplashScreenActivity : AppCompatActivity() {
             if (isLogin) {
                 // Jika sudah login → Dashboard
                 val intent =
-                    Intent(this@SplashScreenActivity, DashboardActivity::class.java)
+                    Intent(this@SplashScreenActivity, BaseActivity::class.java)
                 startActivity(intent)
             } else {
                 // Jika belum login → Auth

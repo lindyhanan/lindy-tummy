@@ -15,6 +15,7 @@ class AuthActivity : AppCompatActivity() {
 
         binding = ActivityAuthBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         // SharedPreferences
         val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
 
@@ -24,21 +25,32 @@ class AuthActivity : AppCompatActivity() {
             val username = binding.etUsername.text.toString()
             val password = binding.etPassword.text.toString()
 
-            // Validasi sederhana
+            // Validasi
             if (username.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Username dan Password wajib diisi", Toast.LENGTH_SHORT).show()
+
+                Toast.makeText(
+                    this,
+                    "Username dan Password wajib diisi",
+                    Toast.LENGTH_SHORT
+                ).show()
+
             } else {
-                // Simpan data login
+
+                // Simpan login
                 val editor = sharedPref.edit()
+
                 editor.putBoolean("isLogin", true)
                 editor.putString("username", username)
                 editor.putString("password", password)
+
                 editor.apply()
 
                 // Pindah ke Dashboard
-                val intent = Intent(this, DashboardActivity::class.java)
+                val intent = Intent(this, BaseActivity::class.java)
+
                 intent.putExtra("title", "Dashboard")
                 intent.putExtra("desc", "Halaman utama aplikasi")
+
                 startActivity(intent)
                 finish()
             }
