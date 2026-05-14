@@ -1,24 +1,24 @@
-package com.example.app
+package com.example.lindy_tummy
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.app.databinding.ActivityHealthBinding
+import com.example.lindy_tummy.databinding.ActivityDashboardBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 
-class HealthActivity : AppCompatActivity() {
+class DashboardActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityHealthBinding
+    private lateinit var binding: ActivityDashboardBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityHealthBinding.inflate(layoutInflater)
+        binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        Log.e("onCreate", "HealthActivity dibuat")
+        Log.d("HealthActivity", "onCreate")
 
         // Tombol 1 → Bangun Ruang
         binding.btnBangunRuang.setOnClickListener {
@@ -44,7 +44,7 @@ class HealthActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Tombol 4 → Logout
+        // Tombol Logout
         binding.btnLogout.setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Konfirmasi Logout")
@@ -52,21 +52,29 @@ class HealthActivity : AppCompatActivity() {
                 .setPositiveButton("Ya") { dialog, _ ->
                     dialog.dismiss()
 
-                    val intent = Intent(this, WelcomeActivity::class.java)
+                    val intent = Intent(this, AuthActivity::class.java)
                     startActivity(intent)
                     finish()
                 }
                 .setNegativeButton("Tidak") { dialog, _ ->
                     dialog.dismiss()
 
-                    Snackbar.make(binding.root, "Logout dibatalkan", Snackbar.LENGTH_SHORT).show()
+                    Snackbar.make(
+                        binding.root,
+                        "Logout dibatalkan",
+                        Snackbar.LENGTH_SHORT
+                    ).show()
                 }
                 .show()
+        }
+        binding.btnWebView.setOnClickListener {
+            val intent = Intent(this, WebViewActivity::class.java)
+            startActivity(intent)
         }
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.e("onDestroy", "HealthActivity dihapus")
+        Log.d("HealthActivity", "onDestroy")
     }
 }

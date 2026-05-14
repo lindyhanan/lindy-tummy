@@ -1,4 +1,4 @@
-package com.example.lindy_tummy.Pertemuan3
+package com.example.lindy_tummy
 
 import android.os.Bundle
 import android.util.Log
@@ -18,6 +18,12 @@ class BangunRuangActivity : AppCompatActivity() {
         binding = ActivityBangunRuangBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Toolbar
+        setSupportActionBar(binding.toolbar)
+
+        supportActionBar?.title = "Bangun Ruang"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val title = intent.getStringExtra("title")
         val desc = intent.getStringExtra("desc")
 
@@ -30,12 +36,16 @@ class BangunRuangActivity : AppCompatActivity() {
             val sisiText = binding.etSisi.text.toString()
 
             if (sisiText.isEmpty()) {
-                Toast.makeText(this, "Masukkan sisi terlebih dahulu", Toast.LENGTH_SHORT).show()
-            } else {
 
+                Toast.makeText(
+                    this,
+                    "Masukkan sisi terlebih dahulu",
+                    Toast.LENGTH_SHORT
+                ).show()
+
+            } else {
                 val sisi = sisiText.toDouble()
                 val hasil = sisi * sisi
-
                 binding.tvHasil.text = "Hasil Luas Persegi : $hasil"
             }
         }
@@ -67,5 +77,11 @@ class BangunRuangActivity : AppCompatActivity() {
                 }
                 .show()
         }
+    }
+
+    // Tombol back toolbar
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }

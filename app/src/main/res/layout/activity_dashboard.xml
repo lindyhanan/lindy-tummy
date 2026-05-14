@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    tools:context=".DashboardActivity">
+
+    <!-- CONTENT -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- TOP BAR -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Menu -->
+                <ImageView
+                    android:id="@+id/ivMenu"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="Menu"
+                    android:src="@drawable/ic_menu"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Profile -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:contentDescription="Profile"
+                    android:src="@drawable/ic_user"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/CardView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Welcome -->
+            <TextView
+                android:id="@+id/tvWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Welcome to Bina Desa"
+                android:textColor="@color/primary_green_dark"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:id="@+id/tvQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Membangun Desa Digital Indonesia"
+                android:textColor="@color/earth_brown"
+                android:textSize="18sp" />
+
+            <!-- MENU BUTTON -->
+            <LinearLayout
+                android:id="@+id/llMood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- Bangun Ruang -->
+                <ImageButton
+                    android:id="@+id/btnBangunRuang"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_circle_green"
+                    android:contentDescription="Bangun Ruang"
+                    android:padding="14dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_bangun" />
+
+                <!-- Custom 1 -->
+                <ImageButton
+                    android:id="@+id/btnCustom1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_circle_green_light"
+                    android:contentDescription="Custom 1"
+                    android:padding="14dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_cs1" />
+
+                <!-- Custom 2 -->
+                <ImageButton
+                    android:id="@+id/btnCustom2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_circle_green_light"
+                    android:contentDescription="Custom 2"
+                    android:padding="14dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_cs2" />
+
+                <!-- Logout -->
+                <ImageButton
+                    android:id="@+id/btnLogout"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/bg_circle_green"
+                    android:contentDescription="Logout"
+                    android:padding="14dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_settings" />
+
+            </LinearLayout>
+
+            <!-- SECTION TITLE -->
+            <TextView
+                android:id="@+id/tvTodayTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Bina Desa Services"
+                android:textColor="@color/primary_green_dark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- WEB VIEW CARD -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnWebView"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/primary_green_light"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:rippleColor="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Web Bina Desa"
+                        android:textColor="@color/primary_green_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="Klik untuk membuka website resmi Bina Desa."
+                        android:textColor="@color/earth_brown"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:text="Open Website ▶"
+                        android:textColor="@color/primary_green"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="Web"
+                        android:src="@drawable/ic_focus" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- INFO CARD -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCustom1"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                app:cardBackgroundColor="@color/light_cream"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Informasi Desa"
+                        android:textColor="@color/primary_green_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="Layanan informasi dan edukasi untuk masyarakat desa."
+                        android:textColor="@color/soft_brown"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:text="Bina Desa 🌿"
+                        android:textColor="@color/orange_accent"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="Village"
+                        android:src="@drawable/ic_menu" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- BOTTOM NAVIGATION -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/primary_green"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:contentDescription="Home"
+            android:src="@drawable/ic_home"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:contentDescription="Timer"
+            android:src="@drawable/ic_timer"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:contentDescription="Group"
+            android:src="@drawable/ic_group"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:contentDescription="Settings"
+            android:src="@drawable/ic_settings"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="NoShadowButton" parent="Widget.AppCompat.Button">
-        <item name="android:elevation">0dp</item>
-        <item name="android:stateListAnimator">@null</item>
+
+    <style name="Theme.LindyTummy"
+        parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="colorPrimary">#6750A4</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="cornerSize">50%</item>
+
     </style>
+
+</resources>

@@ -1,41 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp">
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:text="Title"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary_green"
+        app:title="Bangun Ruang"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/ic_arrow"
+        app:navigationIconTint="@color/white"/>
 
-    <TextView
-        android:id="@+id/tvDesc"
-        android:text="Desc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle"
-        android:layout_marginTop="8dp"/>
+    <!-- Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cream">
 
-    <Button
-        android:id="@+id/btnShowSnackbar"
-        android:text="Show Snackbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tvDesc"
-        android:layout_marginTop="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
 
-    <Button
-        android:id="@+id/btnShowDialog"
-        android:text="Show Dialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btnShowSnackbar"
-        android:layout_marginTop="10dp"/>
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bangun Ruang"
+                android:textColor="@color/primary_green_dark"
+                android:textSize="28sp"
+                android:textStyle="bold" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- Description -->
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Menghitung luas persegi"
+                android:textColor="@color/earth_brown"
+                android:textSize="16sp" />
+
+            <!-- Input -->
+            <EditText
+                android:id="@+id/etSisi"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_input"
+                android:hint="Masukkan sisi persegi"
+                android:inputType="numberDecimal"
+                android:padding="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray" />
+
+            <!-- Button Hitung -->
+            <Button
+                android:id="@+id/btnHitung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/primary_green"
+                android:text="Hitung Luas Persegi"
+                android:textColor="@color/white" />
+
+            <!-- Result -->
+            <TextView
+                android:id="@+id/tvHasil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Hasil :"
+                android:textColor="@color/primary_green_dark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Snackbar -->
+            <Button
+                android:id="@+id/btnShowSnackbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/primary_green_light"
+                android:text="Show Snackbar"
+                android:textColor="@color/black" />
+
+            <!-- Dialog -->
+            <Button
+                android:id="@+id/btnShowDialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/yellow_accent"
+                android:text="Show Dialog"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
