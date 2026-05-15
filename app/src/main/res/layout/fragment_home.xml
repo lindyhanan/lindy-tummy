@@ -13,8 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:fillViewport="true"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/bottomNav">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -252,47 +251,47 @@
     </ScrollView>
 
     <!-- BOTTOM NAVIGATION -->
-    <LinearLayout
-        android:id="@+id/bottomNav"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@color/primary_green"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/bottomNav"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:background="@color/primary_green"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent">-->
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:contentDescription="Home"
-            android:src="@drawable/ic_home"
-            app:tint="@color/white" />
+<!--        <ImageView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:contentDescription="Home"-->
+<!--            android:src="@drawable/ic_home"-->
+<!--            app:tint="@color/white" />-->
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:contentDescription="Timer"
-            android:src="@drawable/ic_timer"
-            app:tint="@color/white" />
+<!--        <ImageView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:contentDescription="Timer"-->
+<!--            android:src="@drawable/ic_timer"-->
+<!--            app:tint="@color/white" />-->
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:contentDescription="Group"
-            android:src="@drawable/ic_group"
-            app:tint="@color/white" />
+<!--        <ImageView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:contentDescription="Group"-->
+<!--            android:src="@drawable/ic_group"-->
+<!--            app:tint="@color/white" />-->
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:contentDescription="Settings"
-            android:src="@drawable/ic_settings"
-            app:tint="@color/white" />
+<!--        <ImageView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:contentDescription="Settings"-->
+<!--            android:src="@drawable/ic_settings"-->
+<!--            app:tint="@color/white" />-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

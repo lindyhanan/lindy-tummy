@@ -15,6 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LindyTummy">
         <activity
+            android:name=".SuccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InputGmailActivity"
+            android:exported="false" />
+        <activity
             android:name=".BaseActivity"
             android:exported="false" />
         <activity

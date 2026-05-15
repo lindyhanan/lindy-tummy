@@ -92,6 +92,7 @@
                     android:textColorHint="#888888" />
 
                 <!-- Login Button -->
+                <!-- Login Button -->
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnSubmit"
                     android:layout_width="match_parent"
@@ -104,6 +105,19 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
+                <!-- Register With Gmail -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRegisterGmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Register With Gmail"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_green_dark"
+                    app:backgroundTint="@color/white"
+                    app:cornerRadius="16dp"
+                    app:strokeColor="@color/primary_green_dark"
+                    app:strokeWidth="1dp"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>

@@ -1,14 +1,16 @@
 package com.example.lindy_tummy
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lindy_tummy.databinding.ActivityAuthBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class AuthActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAuthBinding
+    private lateinit var sharedPref: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,44 +18,45 @@ class AuthActivity : AppCompatActivity() {
         binding = ActivityAuthBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // SharedPreferences
-        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+        sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
 
         binding.btnSubmit.setOnClickListener {
 
-            // Ambil input
-            val username = binding.etUsername.text.toString()
-            val password = binding.etPassword.text.toString()
+            val username = binding.etUsername.text.toString().trim()
+            val password = binding.etPassword.text.toString().trim()
 
-            // Validasi
+            val savedUsername = sharedPref.getString("username", null)
+            val savedPassword = sharedPref.getString("password", null)
+
             if (username.isEmpty() || password.isEmpty()) {
+                showError("Username dan Password wajib diisi")
+                return@setOnClickListener
+            }
 
-                Toast.makeText(
-                    this,
-                    "Username dan Password wajib diisi",
-                    Toast.LENGTH_SHORT
-                ).show()
+            val loginValid =
+                savedUsername != null &&
+                        savedPassword != null &&
+                        username == savedUsername &&
+                        password == savedPassword
 
-            } else {
-
-                // Simpan login
-                val editor = sharedPref.edit()
-
-                editor.putBoolean("isLogin", true)
-                editor.putString("username", username)
-                editor.putString("password", password)
-
-                editor.apply()
-
-                // Pindah ke Dashboard
-                val intent = Intent(this, BaseActivity::class.java)
-
-                intent.putExtra("title", "Dashboard")
-                intent.putExtra("desc", "Halaman utama aplikasi")
-
-                startActivity(intent)
+            if (loginValid) {
+                startActivity(Intent(this, BaseActivity::class.java))
                 finish()
+            } else {
+                showError("Login gagal! Username atau password salah")
             }
         }
+
+        binding.btnRegisterGmail.setOnClickListener {
+            startActivity(Intent(this, InputGmailActivity::class.java))
+        }
+    }
+
+    private fun showError(message: String) {
+        MaterialAlertDialogBuilder(this)
+            .setTitle("Login Error")
+            .setMessage(message)
+            .setPositiveButton("OK", null)
+            .show()
     }
 }
