@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -70,6 +69,42 @@
                 android:textColor="@color/earth_brown"
                 android:textSize="18sp" />
 
+            <!-- SEARCH -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputSearch"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:hint="Cari layanan desa..."
+                app:boxBackgroundColor="@android:color/white"
+                app:boxCornerRadiusBottomEnd="20dp"
+                app:boxCornerRadiusBottomStart="20dp"
+                app:boxCornerRadiusTopEnd="20dp"
+                app:boxCornerRadiusTopStart="20dp"
+                app:startIconDrawable="@drawable/ic_search">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- BUTTON -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:backgroundTint="@color/orange_accent"
+                android:text="Cari Sekarang"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:cornerRadius="18dp"
+                app:icon="@drawable/ic_search"
+                app:iconGravity="textStart" />
+
             <!-- MENU BUTTON -->
             <LinearLayout
                 android:id="@+id/llMood"
@@ -128,6 +163,7 @@
 
             </LinearLayout>
 
+
             <!-- SECTION TITLE -->
             <TextView
                 android:id="@+id/tvTodayTask"
@@ -138,6 +174,141 @@
                 android:textColor="@color/primary_green_dark"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
+            <!-- GRID MENU -->
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="4dp"
+                app:columnCount="2"
+                app:useDefaultMargins="true">
+
+                <!-- MENU 1 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="22dp"
+                    app:cardElevation="0dp"
+                    app:layout_columnWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:src="@drawable/ic_bangun" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Bangun Ruang"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- MENU 2 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    app:cardBackgroundColor="@color/light_cream"
+                    app:cardCornerRadius="22dp"
+                    app:cardElevation="0dp"
+                    app:layout_columnWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:src="@drawable/ic_focus" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Website Desa"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- MENU 3 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    app:cardBackgroundColor="@color/primary_green_light"
+                    app:cardCornerRadius="22dp"
+                    app:cardElevation="0dp"
+                    app:layout_columnWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:src="@drawable/ic_group" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Edukasi"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- MENU 4 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="22dp"
+                    app:cardElevation="0dp"
+                    app:layout_columnWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:src="@drawable/ic_settings" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Pengaturan"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.gridlayout.widget.GridLayout>
 
             <!-- WEB VIEW CARD -->
             <com.google.android.material.card.MaterialCardView
@@ -251,47 +422,47 @@
     </ScrollView>
 
     <!-- BOTTOM NAVIGATION -->
-<!--    <LinearLayout-->
-<!--        android:id="@+id/bottomNav"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="70dp"-->
-<!--        android:background="@color/primary_green"-->
-<!--        android:gravity="center"-->
-<!--        android:orientation="horizontal"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent">-->
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/bottomNav"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="70dp"-->
+    <!--        android:background="@color/primary_green"-->
+    <!--        android:gravity="center"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent">-->
 
-<!--        <ImageView-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="30dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:contentDescription="Home"-->
-<!--            android:src="@drawable/ic_home"-->
-<!--            app:tint="@color/white" />-->
+    <!--        <ImageView-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="30dp"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:contentDescription="Home"-->
+    <!--            android:src="@drawable/ic_home"-->
+    <!--            app:tint="@color/white" />-->
 
-<!--        <ImageView-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="30dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:contentDescription="Timer"-->
-<!--            android:src="@drawable/ic_timer"-->
-<!--            app:tint="@color/white" />-->
+    <!--        <ImageView-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="30dp"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:contentDescription="Timer"-->
+    <!--            android:src="@drawable/ic_timer"-->
+    <!--            app:tint="@color/white" />-->
 
-<!--        <ImageView-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="30dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:contentDescription="Group"-->
-<!--            android:src="@drawable/ic_group"-->
-<!--            app:tint="@color/white" />-->
+    <!--        <ImageView-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="30dp"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:contentDescription="Group"-->
+    <!--            android:src="@drawable/ic_group"-->
+    <!--            app:tint="@color/white" />-->
 
-<!--        <ImageView-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="30dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:contentDescription="Settings"-->
-<!--            android:src="@drawable/ic_settings"-->
-<!--            app:tint="@color/white" />-->
+    <!--        <ImageView-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="30dp"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:contentDescription="Settings"-->
+    <!--            android:src="@drawable/ic_settings"-->
+    <!--            app:tint="@color/white" />-->
 
-<!--    </LinearLayout>-->
+    <!--    </LinearLayout>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

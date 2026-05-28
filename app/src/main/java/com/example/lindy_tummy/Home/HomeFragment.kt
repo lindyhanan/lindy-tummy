@@ -17,9 +17,7 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
@@ -59,20 +57,14 @@ class HomeFragment : Fragment() {
         // Logout
         binding.btnLogout.setOnClickListener {
 
-            MaterialAlertDialogBuilder(requireContext())
-                .setTitle("Logout")
-                .setMessage("Yakin ingin logout?")
-                .setPositiveButton("Ya") { dialog, _ ->
+            MaterialAlertDialogBuilder(requireContext()).setTitle("Logout")
+                .setMessage("Yakin ingin logout?").setPositiveButton("Ya") { dialog, _ ->
 
-                    val sharedPref = requireContext()
-                        .getSharedPreferences(
-                            "user_pref",
-                            AppCompatActivity.MODE_PRIVATE
+                    val sharedPref = requireContext().getSharedPreferences(
+                            "user_pref", AppCompatActivity.MODE_PRIVATE
                         )
 
-                    sharedPref.edit()
-                        .putBoolean("isLogin", false)
-                        .apply()
+                    sharedPref.edit().putBoolean("isLogin", false).apply()
 
                     startActivity(
                         Intent(requireContext(), AuthActivity::class.java)
@@ -81,8 +73,7 @@ class HomeFragment : Fragment() {
                     requireActivity().finish()
                 }
 
-                .setNegativeButton("Tidak", null)
-                .show()
+                .setNegativeButton("Tidak", null).show()
         }
 
         return binding.root

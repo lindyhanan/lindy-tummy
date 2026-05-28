@@ -72,6 +72,36 @@
 
             </com.google.android.material.card.MaterialCardView>
 
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipEdukasi"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Edukasi" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipDigital"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Digital" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipPelatihan"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pelatihan" />
+
+            </com.google.android.material.chip.ChipGroup>
             <!-- DESKRIPSI -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
