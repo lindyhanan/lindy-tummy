@@ -72,6 +72,41 @@
 
             </com.google.android.material.card.MaterialCardView>
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputSearch"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:hint="Cari layanan desa..."
+                app:boxBackgroundColor="@android:color/white"
+                app:boxCornerRadiusBottomEnd="20dp"
+                app:boxCornerRadiusBottomStart="20dp"
+                app:boxCornerRadiusTopEnd="20dp"
+                app:boxCornerRadiusTopStart="20dp"
+                app:startIconDrawable="@drawable/ic_search">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- BUTTON -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:backgroundTint="@color/orange_accent"
+                android:text="Cari Sekarang"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:cornerRadius="18dp"
+                app:icon="@drawable/ic_search"
+                app:iconGravity="textStart" />
+
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/chipGroupFilter"
                 android:layout_width="wrap_content"
@@ -102,7 +137,16 @@
                     android:text="Pelatihan" />
 
             </com.google.android.material.chip.ChipGroup>
+
             <!-- DESKRIPSI -->
+
+            <Button
+                android:id="@+id/btnTanah"
+                android:layout_width="144dp"
+                android:layout_height="match_parent"
+                android:pointerIcon="arrow"
+                android:text="Info Pertanahan" />
+
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

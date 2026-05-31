@@ -23,19 +23,15 @@ class BaseActivity : AppCompatActivity() {
         replaceFragment(HomeFragment())
 
         binding.bottomNavView.setOnItemSelectedListener {
-
             when (it.itemId) {
-
                 R.id.home -> {
                     replaceFragment(HomeFragment())
                     true
                 }
-
                 R.id.about -> {
                     replaceFragment(AboutFragment())
                     true
                 }
-
                 R.id.profile -> {
                     replaceFragment(ProfileFragment())
                     true
@@ -44,14 +40,11 @@ class BaseActivity : AppCompatActivity() {
                     replaceFragment(SettingsFragment())
                     true
                 }
-
                 else -> false
             }
         }
     }
-
     private fun replaceFragment(fragment: Fragment) {
-
         supportFragmentManager.beginTransaction()
             .replace(binding.fragmentContainer.id, fragment)
             .commit()

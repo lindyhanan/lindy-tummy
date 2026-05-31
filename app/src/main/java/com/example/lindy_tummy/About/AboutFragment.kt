@@ -1,5 +1,6 @@
 package com.example.lindy_tummy.About
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -33,6 +34,11 @@ class AboutFragment : Fragment() {
                     Toast.LENGTH_SHORT
                 ).show()
             }
+        }
+        binding.btnTanah.setOnClickListener {
+            startActivity(
+                Intent(requireContext(), TanahActivity::class.java)
+            )
         }
 
         return binding.root
