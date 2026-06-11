@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LindyTummy">
         <activity
+            android:name=".tutorial.OnboardingActivity"
+            android:exported="false" />
+        <activity
             android:name=".About.TanahActivity"
             android:exported="false" />
         <activity

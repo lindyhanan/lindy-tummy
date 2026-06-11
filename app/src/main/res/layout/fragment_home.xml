@@ -7,12 +7,11 @@
     android:background="@color/cream"
     tools:context=".DashboardActivity">
 
-    <!-- CONTENT -->
-    <ScrollView
+    <!-- UBAH MENJADI NESTEDSCROLLVIEW AGAR RECYCLERVIEW BISA DI-SCROLL -->
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:fillViewport="true"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -126,7 +125,6 @@
                     android:src="@drawable/ic_settings" />
 
             </LinearLayout>
-
 
             <!-- SECTION TITLE -->
             <TextView
@@ -335,7 +333,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="24dp"
+                android:layout_marginBottom="16dp"
                 app:cardBackgroundColor="@color/light_cream"
                 app:cardCornerRadius="24dp"
                 app:cardElevation="0dp">
@@ -381,52 +379,30 @@
 
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- ======================================================== -->
+            <!-- TAMBAHAN: SEKSI DAFTAR BERITA TERKINI DARI API           -->
+            <!-- ======================================================== -->
+            <TextView
+                android:id="@+id/tvNewsTitleHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Kabar Berita Desa"
+                android:textColor="@color/primary_green_dark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="24dp"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_news" />
+
         </LinearLayout>
 
-    </ScrollView>
-
-    <!-- BOTTOM NAVIGATION -->
-    <!--    <LinearLayout-->
-    <!--        android:id="@+id/bottomNav"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="70dp"-->
-    <!--        android:background="@color/primary_green"-->
-    <!--        android:gravity="center"-->
-    <!--        android:orientation="horizontal"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent">-->
-
-    <!--        <ImageView-->
-    <!--            android:layout_width="0dp"-->
-    <!--            android:layout_height="30dp"-->
-    <!--            android:layout_weight="1"-->
-    <!--            android:contentDescription="Home"-->
-    <!--            android:src="@drawable/ic_home"-->
-    <!--            app:tint="@color/white" />-->
-
-    <!--        <ImageView-->
-    <!--            android:layout_width="0dp"-->
-    <!--            android:layout_height="30dp"-->
-    <!--            android:layout_weight="1"-->
-    <!--            android:contentDescription="Timer"-->
-    <!--            android:src="@drawable/ic_timer"-->
-    <!--            app:tint="@color/white" />-->
-
-    <!--        <ImageView-->
-    <!--            android:layout_width="0dp"-->
-    <!--            android:layout_height="30dp"-->
-    <!--            android:layout_weight="1"-->
-    <!--            android:contentDescription="Group"-->
-    <!--            android:src="@drawable/ic_group"-->
-    <!--            app:tint="@color/white" />-->
-
-    <!--        <ImageView-->
-    <!--            android:layout_width="0dp"-->
-    <!--            android:layout_height="30dp"-->
-    <!--            android:layout_weight="1"-->
-    <!--            android:contentDescription="Settings"-->
-    <!--            android:src="@drawable/ic_settings"-->
-    <!--            app:tint="@color/white" />-->
-
-    <!--    </LinearLayout>-->
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

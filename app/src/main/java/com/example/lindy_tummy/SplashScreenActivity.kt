@@ -7,6 +7,7 @@ import androidx.lifecycle.lifecycleScope
 import com.example.lindy_tummy.databinding.ActivityCustom1Binding
 import com.example.lindy_tummy.databinding.ActivityDashboardBinding
 import com.example.lindy_tummy.databinding.ActivitySplashScreenBinding
+import com.example.lindy_tummy.tutorial.OnboardingActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -34,7 +35,7 @@ class SplashScreenActivity : AppCompatActivity() {
             } else {
                 // Jika belum login → Auth
                 val intent =
-                    Intent(this@SplashScreenActivity, AuthActivity::class.java)
+                    Intent(this@SplashScreenActivity, OnboardingActivity::class.java)
                 startActivity(intent)
             }
 
