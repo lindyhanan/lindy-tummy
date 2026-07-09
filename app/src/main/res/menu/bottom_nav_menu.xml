@@ -15,6 +15,10 @@
         android:id="@+id/profile"
         android:icon="@drawable/ic_more"
         android:title="Profile" />
+    <item
+        android:id="@+id/note"
+        android:icon="@drawable/ic_more"
+        android:title="Note" />
 
     <item
         android:id="@+id/settings"

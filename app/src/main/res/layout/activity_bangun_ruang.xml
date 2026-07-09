@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:fitsSystemWindows="true">
-
     <!-- Toolbar -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
@@ -17,7 +16,6 @@
         app:titleTextColor="@color/white"
         app:navigationIcon="@drawable/ic_arrow"
         app:navigationIconTint="@color/white"/>
-
     <!-- Content -->
     <ScrollView
         android:layout_width="match_parent"
@@ -29,7 +27,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="24dp">
-
             <!-- Title -->
             <TextView
                 android:id="@+id/tvTitle"
@@ -39,7 +36,6 @@
                 android:textColor="@color/primary_green_dark"
                 android:textSize="28sp"
                 android:textStyle="bold" />
-
             <!-- Description -->
             <TextView
                 android:id="@+id/tvDesc"
@@ -49,7 +45,6 @@
                 android:text="Menghitung luas persegi"
                 android:textColor="@color/earth_brown"
                 android:textSize="16sp" />
-
             <!-- Input -->
             <EditText
                 android:id="@+id/etSisi"
@@ -62,7 +57,6 @@
                 android:padding="16dp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/gray" />
-
             <!-- Button Hitung -->
             <Button
                 android:id="@+id/btnHitung"
@@ -72,7 +66,6 @@
                 android:backgroundTint="@color/primary_green"
                 android:text="Hitung Luas Persegi"
                 android:textColor="@color/white" />
-
             <!-- Result -->
             <TextView
                 android:id="@+id/tvHasil"
@@ -83,7 +76,6 @@
                 android:textColor="@color/primary_green_dark"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-
             <!-- Snackbar -->
             <Button
                 android:id="@+id/btnShowSnackbar"
@@ -93,7 +85,6 @@
                 android:backgroundTint="@color/primary_green_light"
                 android:text="Show Snackbar"
                 android:textColor="@color/black" />
-
             <!-- Dialog -->
             <Button
                 android:id="@+id/btnShowDialog"
@@ -103,9 +94,6 @@
                 android:backgroundTint="@color/yellow_accent"
                 android:text="Show Dialog"
                 android:textColor="@color/black" />
-
         </LinearLayout>
-
     </ScrollView>
-
 </LinearLayout>

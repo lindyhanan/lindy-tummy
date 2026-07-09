@@ -92,7 +92,6 @@
                     android:textColorHint="#888888" />
 
                 <!-- Login Button -->
-                <!-- Login Button -->
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnSubmit"
                     android:layout_width="match_parent"

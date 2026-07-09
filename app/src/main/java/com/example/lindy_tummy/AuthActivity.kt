@@ -32,28 +32,19 @@ class AuthActivity : AppCompatActivity() {
                 showError("Username dan Password wajib diisi")
                 return@setOnClickListener
             }
-
-            // 🔥 KONDISI 1 (SOAL): username == password
             val loginDefault = username == password
-
-            // 🔥 KONDISI 2 (SOAL): dari SharedPreferences
             val loginFromPref =
                 savedUsername != null &&
                         savedPassword != null &&
                         username == savedUsername &&
                         password == savedPassword
-
-            // 🔥 FINAL CHECK
             if (loginDefault || loginFromPref) {
-
                 startActivity(Intent(this, BaseActivity::class.java))
                 finish()
-
             } else {
                 showError("Login gagal! Username atau password salah")
             }
         }
-
         binding.btnRegisterGmail.setOnClickListener {
             startActivity(Intent(this, InputGmailActivity::class.java))
         }

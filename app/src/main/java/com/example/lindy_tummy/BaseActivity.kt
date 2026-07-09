@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.lindy_tummy.About.AboutFragment
 import com.example.lindy_tummy.Home.HomeFragment
+import com.example.lindy_tummy.Note.FragmentNote
 import com.example.lindy_tummy.Profile.ProfileFragment
 import com.example.lindy_tummy.Settings.SettingsFragment
 import com.example.lindy_tummy.databinding.ActivityBaseBinding
@@ -34,6 +35,10 @@ class BaseActivity : AppCompatActivity() {
                 }
                 R.id.profile -> {
                     replaceFragment(ProfileFragment())
+                    true
+                }
+                R.id.note -> {
+                    replaceFragment(FragmentNote())
                     true
                 }
                 R.id.settings -> {

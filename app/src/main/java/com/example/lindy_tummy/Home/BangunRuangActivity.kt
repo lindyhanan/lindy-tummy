@@ -9,9 +9,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 
 class BangunRuangActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityBangunRuangBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -32,24 +30,19 @@ class BangunRuangActivity : AppCompatActivity() {
 
         // Tombol hitung luas persegi
         binding.btnHitung.setOnClickListener {
-
             val sisiText = binding.etSisi.text.toString()
-
             if (sisiText.isEmpty()) {
-
                 Toast.makeText(
                     this,
                     "Masukkan sisi terlebih dahulu",
                     Toast.LENGTH_SHORT
                 ).show()
-
             } else {
                 val sisi = sisiText.toDouble()
                 val hasil = sisi * sisi
                 binding.tvHasil.text = "Hasil Luas Persegi : $hasil"
             }
         }
-
         // Snackbar
         binding.btnShowSnackbar.setOnClickListener {
             Snackbar.make(
@@ -62,7 +55,6 @@ class BangunRuangActivity : AppCompatActivity() {
                 }
                 .show()
         }
-
         // AlertDialog
         binding.btnShowDialog.setOnClickListener {
             MaterialAlertDialogBuilder(this)

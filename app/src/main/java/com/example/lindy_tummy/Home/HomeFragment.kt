@@ -12,6 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lindy_tummy.AuthActivity
 import com.example.lindy_tummy.Home.news.NewsAdapter
+import com.example.lindy_tummy.Home.CameraActivity
 import com.example.lindy_tummy.R
 import com.example.lindy_tummy.data.api.NewsApiClient
 import com.example.lindy_tummy.data.model.NewsResponse
@@ -60,6 +61,10 @@ class HomeFragment : Fragment() {
         // WebView
         binding.btnWebView.setOnClickListener {
             startActivity(Intent(requireContext(), WebViewActivity::class.java))
+        }
+        binding.btnCamera.setOnClickListener {
+            val intent = Intent(requireContext(), CameraActivity::class.java)
+            startActivity(intent)
         }
 
         // Logout
